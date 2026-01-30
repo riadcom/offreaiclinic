@@ -183,7 +183,7 @@ const Problem = () => (
             className="rounded-[3rem] shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
           />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-            <div className="bg-red-600 text-white px-8 py-4 rounded-3xl font-black text-2xl -rotate-6 shadow-[0_0_30px_rgba(220,38,38,0.5)] border-4 border-white">
+            <div className="bg-red-600 text-white px-8 py-4 rounded-3xl font-black text-2xl -rotate-6 shadow-[0_0_30px_rgba(220,38,38,0.5)] border-4 border-white text-center">
               75% من المرضى يغادرون لعدم الرد!
             </div>
           </div>
@@ -196,7 +196,7 @@ const Problem = () => (
 const Transformation = () => (
   <section className="py-24 bg-white">
     <div className="container mx-auto px-4">
-      <div className="bg-blue-600 rounded-[4rem] p-10 md:p-24 text-white text-center shadow-3xl relative overflow-hidden group">
+      <div className="bg-blue-600 rounded-[4rem] p-10 md:p-24 text-white text-center shadow-2xl relative overflow-hidden group">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-48 -mt-48 blur-[100px]"></div>
         <h2 className="text-4xl md:text-6xl font-black mb-10 relative z-10 tracking-tight leading-tight">
@@ -209,7 +209,7 @@ const Transformation = () => (
             { title: "تصعيد ذكي", desc: "تحويل الحالات الجدية فوراً لفريقك", icon: <CheckCircle className="w-8 h-8 mb-4" /> },
             { title: "مواعيد جاهزة", desc: "تأكيد الحجوزات وإرسال تذكيرات", icon: <Calendar className="w-8 h-8 mb-4" /> }
           ].map((item, idx) => (
-            <div key={idx} className="bg-white/15 backdrop-blur-xl p-8 rounded-3xl border border-white/20 hover:bg-white/25 transition-all">
+            <div key={idx} className="bg-white/10 backdrop-blur-xl p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all">
               <div className="flex justify-center text-emerald-300">{item.icon}</div>
               <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
               <p className="text-blue-50 text-lg leading-snug opacity-90">{item.desc}</p>
@@ -229,7 +229,6 @@ const Solution = () => (
     <div className="container mx-auto px-4">
       <SectionTitle title="الحل: ورشة تدريبية + نظام عملي جاهز للتطبيق" subtitle="نحن لا نبيعك اشتراكاً شهرياً، بل نبني لك أصولك التقنية الخاصة" />
       <div className="grid md:grid-cols-2 gap-10">
-        {/* Column 1: The Workshop */}
         <div className="bg-white p-12 rounded-[3rem] shadow-xl border border-blue-50 group hover:border-blue-500 transition-all">
           <div className="w-20 h-20 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-lg shadow-blue-100">
             <Users size={40} />
@@ -250,7 +249,6 @@ const Solution = () => (
           </ul>
         </div>
         
-        {/* Column 2: The Tech System */}
         <div className="bg-white p-12 rounded-[3rem] shadow-xl border border-emerald-50 group hover:border-emerald-500 transition-all">
           <div className="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-emerald-600 group-hover:text-white transition-all shadow-lg shadow-emerald-100">
             <Smartphone size={40} />
@@ -277,7 +275,7 @@ const Solution = () => (
 
 const HowItWorks = () => (
   <section id="how-it-works" className="py-24 bg-white relative">
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 text-center">
       <SectionTitle title="كيف تعمل المنظومة خطوة بخطوة؟" />
       <div className="grid md:grid-cols-3 gap-16 relative">
         <div className="hidden lg:block absolute top-1/3 left-0 w-full h-1 bg-slate-100 -z-10"></div>
@@ -301,7 +299,7 @@ const HowItWorks = () => (
             icon: <Calendar className="w-12 h-12 text-blue-600" />
           }
         ].map((item, idx) => (
-          <div key={idx} className="relative flex flex-col items-center text-center group">
+          <div key={idx} className="relative flex flex-col items-center group">
             <div className="mb-8 relative">
               <div className="w-28 h-28 bg-white border-2 border-slate-100 rounded-[2.5rem] flex items-center justify-center shadow-xl group-hover:border-blue-500 group-hover:-translate-y-2 transition-all">
                 {item.icon}
@@ -324,7 +322,7 @@ const BenefitSplit = () => (
     <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-2 gap-10">
         <div className="bg-slate-800 p-12 rounded-[3rem] border border-white/5 relative overflow-hidden group">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800')] opacity-10 grayscale group-hover:grayscale-0 transition-all duration-700"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800')] opacity-10 grayscale group-hover:grayscale-0 transition-all duration-700 bg-cover"></div>
           <h3 className="text-4xl font-black text-blue-400 mb-10 flex items-center gap-4 relative z-10">
             <Users className="w-10 h-10" />
             <span>للمريض</span>
@@ -346,7 +344,7 @@ const BenefitSplit = () => (
           </div>
         </div>
         <div className="bg-slate-800 p-12 rounded-[3rem] border border-white/5 relative overflow-hidden group">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800')] opacity-10 grayscale group-hover:grayscale-0 transition-all duration-700"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800')] opacity-10 grayscale group-hover:grayscale-0 transition-all duration-700 bg-cover"></div>
           <h3 className="text-4xl font-black text-emerald-400 mb-10 flex items-center gap-4 relative z-10">
             <TrendingUp className="w-10 h-10" />
             <span>للعيادة</span>
@@ -376,14 +374,14 @@ const ProofOfValue = () => (
   <section className="py-24 bg-white">
     <div className="container mx-auto px-4">
       <SectionTitle title="أرقام حقيقية من عياداتنا" subtitle="هذه النتائج حققتها عيادات طب أسنان وتجميل في الجزائر بالفعل" />
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
         {[
           { val: "92%", label: "دقة إجابات البوت الطبي", icon: <MessageSquare /> },
           { val: "65%", label: "توفير في وقت الاستقبال", icon: <Clock /> },
           { val: "+40%", label: "زيادة في المواعيد المحجوزة", icon: <TrendingUp /> },
           { val: "5000 دج", label: "تكلفة التشغيل الشهرية القصوى", icon: <Zap /> }
         ].map((stat, idx) => (
-          <div key={idx} className="bg-slate-50 border border-slate-100 p-10 rounded-[2.5rem] text-center hover:bg-white hover:shadow-2xl transition-all duration-500 group">
+          <div key={idx} className="bg-slate-50 border border-slate-100 p-10 rounded-[2.5rem] hover:bg-white hover:shadow-2xl transition-all duration-500 group">
             <div className="text-blue-600 mb-6 inline-block bg-white p-5 rounded-2xl shadow-sm group-hover:scale-110 transition-transform">{stat.icon}</div>
             <div className="text-5xl font-black text-slate-900 mb-3 tracking-tighter">{stat.val}</div>
             <div className="text-slate-600 font-bold text-lg">{stat.label}</div>
@@ -396,15 +394,15 @@ const ProofOfValue = () => (
 
 const Pricing = () => (
   <section id="pricing" className="py-24 bg-slate-50 relative overflow-hidden">
-    <div className="container mx-auto px-4 relative z-10">
+    <div className="container mx-auto px-4 relative z-10 text-center">
       <SectionTitle title="تكلفة تشغيل ذكية… بدون مفاجآت" />
       <div className="max-w-4xl mx-auto bg-white rounded-[4rem] p-12 md:p-20 shadow-3xl border border-blue-50 relative">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-8 py-3 rounded-2xl font-black text-xl shadow-lg shadow-blue-200">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-8 py-3 rounded-2xl font-black text-xl shadow-lg">
           الحل الاقتصادي الأول للعيادات
         </div>
-        <div className="text-3xl font-black text-slate-800 mb-12 text-center">لا توجد اشتراكات شهرية تعجيزية</div>
+        <div className="text-3xl font-black text-slate-800 mb-12">لا توجد اشتراكات شهرية تعجيزية</div>
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+          <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 text-right">
             <h4 className="text-xl font-black mb-4">التكاليف الثابتة (تقريبية)</h4>
             <div className="space-y-4">
               <div className="flex justify-between font-bold text-lg">
@@ -422,7 +420,7 @@ const Pricing = () => (
             <p className="text-emerald-600 font-bold text-xl leading-snug">ميزانية تشغيل شهرية كاملة تغنيك عن موظف براتب 40,000 دج</p>
           </div>
         </div>
-        <Button variant="primary" className="w-full py-6 text-2xl shadow-blue-200 shadow-2xl">سجل اهتمامك بالورشة الآن</Button>
+        <Button variant="primary" className="w-full py-6 text-2xl shadow-blue-200">سجل اهتمامك بالورشة الآن</Button>
       </div>
     </div>
   </section>
@@ -455,7 +453,7 @@ const FinalCTA = () => (
         احصل على استشارة مجانية لمدة 20 دقيقة لنشرح لك كيف سنغير تجربة مرضك ونزيد حجوزات عيادتك.
       </p>
       <div className="flex flex-col sm:flex-row gap-6 justify-center">
-        <Button variant="secondary" className="px-16 py-6 text-2xl shadow-emerald-500/30 shadow-2xl">احجز استشارتك المجانية</Button>
+        <Button variant="secondary" className="px-16 py-6 text-2xl shadow-2xl">احجز استشارتك المجانية</Button>
         <Button variant="outline" className="px-16 py-6 text-2xl border-white text-white bg-transparent hover:bg-white hover:text-blue-600">تفاصيل الورشة القادمة</Button>
       </div>
     </div>
@@ -465,15 +463,15 @@ const FinalCTA = () => (
 const Footer = () => (
   <footer className="py-16 bg-slate-900 text-slate-400 border-t border-white/5">
     <div className="container mx-auto px-4 text-center">
-      <div className="flex items-center justify-center gap-3 mb-8">
-        <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg">S</div>
-        <span className="text-2xl font-black text-white">SmartClinic <span className="text-blue-600">AI</span></span>
+      <div className="flex items-center justify-center gap-3 mb-8 text-white">
+        <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black text-xl shadow-lg">S</div>
+        <span className="text-2xl font-black">SmartClinic <span className="text-blue-600">AI</span></span>
       </div>
       <p className="text-xl mb-10 max-w-xl mx-auto">الرائد الأول في تحويل العيادات الجزائرية إلى عيادات ذكية تعتمد على البيانات والذكاء الاصطناعي.</p>
       <div className="flex justify-center gap-10 mb-12">
-        <ShieldCheck className="w-8 h-8 hover:text-blue-400 cursor-help" />
-        <Zap className="w-8 h-8 hover:text-blue-400 cursor-help" />
-        <Clock className="w-8 h-8 hover:text-blue-400 cursor-help" />
+        <ShieldCheck className="w-8 h-8 hover:text-blue-400 cursor-pointer" />
+        <Zap className="w-8 h-8 hover:text-blue-400 cursor-pointer" />
+        <Clock className="w-8 h-8 hover:text-blue-400 cursor-pointer" />
       </div>
       <div className="text-sm font-medium tracking-widest opacity-50">
         جميع الحقوق محفوظة © {new Date().getFullYear()} SMARTCLINIC AI ALGERIA
@@ -494,7 +492,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-50 selection:bg-blue-600 selection:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-slate-50 selection:bg-blue-600 selection:text-white overflow-x-hidden font-cairo">
       <Navbar />
       <Hero />
       <Problem />
@@ -509,7 +507,7 @@ const App: React.FC = () => {
       <Footer />
 
       {/* Sticky Mobile CTA */}
-      <div className={`fixed bottom-0 left-0 right-0 p-4 bg-white/95 backdrop-blur-lg border-t border-slate-200 z-50 md:hidden transition-all duration-500 transform ${showStickyCTA ? 'translate-y-0 shadow-[0_-10px_30px_rgba(0,0,0,0.1)]' : 'translate-y-full'}`}>
+      <div className={`fixed bottom-0 left-0 right-0 p-4 bg-white/95 backdrop-blur-lg border-t border-slate-200 z-50 md:hidden transition-all duration-500 transform ${showStickyCTA ? 'translate-y-0 shadow-lg' : 'translate-y-full'}`}>
         <Button variant="primary" className="w-full text-xl py-5">احجز مقعدك في الورشة الآن</Button>
       </div>
     </div>
