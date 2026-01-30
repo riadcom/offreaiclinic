@@ -1,0 +1,8 @@
+{
+  "name": "SmartClinic AI Landing Page",
+  "description": "A high-conversion landing page for a specialized medical AI workshop and system designed for Algerian clinics, featuring automated patient response and unified inbox solutions.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
