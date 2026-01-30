@@ -101,7 +101,7 @@ const Hero = () => (
         بناء <span className="text-slate-900 font-bold border-b-4 border-blue-400">نظام رد آلي</span> متكامل بذكاء عيادتك.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-14 w-full max-w-5xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-14 w-full max-w-5xl text-right">
         {[
           { text: "رد فوري على 90% من الأسئلة", icon: <MessageSquare className="text-blue-500" /> },
           { text: "تقليل ضغط الاستقبال بنسبة 70%", icon: <Users className="text-blue-500" /> },
@@ -109,7 +109,7 @@ const Hero = () => (
           { text: "تحويل الرسائل إلى مواعيد مؤكدة", icon: <Calendar className="text-blue-500" /> },
         ].map((item, idx) => (
           <div key={idx} className="bg-white/80 backdrop-blur p-4 rounded-2xl flex items-center gap-3 border border-slate-100 shadow-sm transition-all hover:shadow-md hover:-translate-y-1">
-            <div className="bg-blue-50 p-2 rounded-lg">{item.icon}</div>
+            <div className="bg-blue-50 p-2 rounded-lg shrink-0">{item.icon}</div>
             <span className="font-bold text-slate-700 text-sm md:text-base">{item.text}</span>
           </div>
         ))}
@@ -134,13 +134,6 @@ const Hero = () => (
             alt="Modern Digital Clinic Dashboard" 
             className="w-full aspect-[21/9] object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
-          <div className="absolute bottom-8 right-8 text-right text-white">
-            <div className="bg-white/20 backdrop-blur-md px-6 py-3 rounded-2xl border border-white/30 inline-flex items-center gap-3">
-              <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
-              <span className="font-bold text-lg">النظام نشط في 12 عيادة حالياً</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -167,7 +160,7 @@ const Problem = () => (
               { text: "مرضى يفقدون الحماس قبل الزيارة الأولى", icon: <TrendingUp className="text-red-400 rotate-180" /> }
             ].map((item, idx) => (
               <div key={idx} className="flex items-center gap-5 bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors group">
-                <div className="p-3 bg-white/10 rounded-xl group-hover:scale-110 transition-transform">
+                <div className="p-3 bg-white/10 rounded-xl group-hover:scale-110 transition-transform shrink-0">
                   {item.icon}
                 </div>
                 <span className="text-xl font-bold">{item.text}</span>
@@ -182,8 +175,8 @@ const Problem = () => (
             alt="Stressed Customer Service Team" 
             className="rounded-[3rem] shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
           />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-            <div className="bg-red-600 text-white px-8 py-4 rounded-3xl font-black text-2xl -rotate-6 shadow-[0_0_30px_rgba(220,38,38,0.5)] border-4 border-white text-center">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-full px-4">
+            <div className="bg-red-600 text-white px-8 py-4 rounded-3xl font-black text-xl md:text-2xl -rotate-6 shadow-[0_0_30px_rgba(220,38,38,0.5)] border-4 border-white text-center mx-auto max-w-xs">
               75% من المرضى يغادرون لعدم الرد!
             </div>
           </div>
@@ -248,7 +241,6 @@ const Solution = () => (
             ))}
           </ul>
         </div>
-        
         <div className="bg-white p-12 rounded-[3rem] shadow-xl border border-emerald-50 group hover:border-emerald-500 transition-all">
           <div className="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-emerald-600 group-hover:text-white transition-all shadow-lg shadow-emerald-100">
             <Smartphone size={40} />
@@ -322,7 +314,7 @@ const BenefitSplit = () => (
     <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-2 gap-10">
         <div className="bg-slate-800 p-12 rounded-[3rem] border border-white/5 relative overflow-hidden group">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800')] opacity-10 grayscale group-hover:grayscale-0 transition-all duration-700 bg-cover"></div>
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800')] opacity-10 grayscale group-hover:grayscale-0 transition-all duration-700 bg-cover"></div>
           <h3 className="text-4xl font-black text-blue-400 mb-10 flex items-center gap-4 relative z-10">
             <Users className="w-10 h-10" />
             <span>للمريض</span>
@@ -344,7 +336,7 @@ const BenefitSplit = () => (
           </div>
         </div>
         <div className="bg-slate-800 p-12 rounded-[3rem] border border-white/5 relative overflow-hidden group">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800')] opacity-10 grayscale group-hover:grayscale-0 transition-all duration-700 bg-cover"></div>
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800')] opacity-10 grayscale group-hover:grayscale-0 transition-all duration-700 bg-cover"></div>
           <h3 className="text-4xl font-black text-emerald-400 mb-10 flex items-center gap-4 relative z-10">
             <TrendingUp className="w-10 h-10" />
             <span>للعيادة</span>
@@ -393,10 +385,10 @@ const ProofOfValue = () => (
 );
 
 const Pricing = () => (
-  <section id="pricing" className="py-24 bg-slate-50 relative overflow-hidden">
-    <div className="container mx-auto px-4 relative z-10 text-center">
+  <section id="pricing" className="py-24 bg-slate-50 relative overflow-hidden text-center">
+    <div className="container mx-auto px-4 relative z-10">
       <SectionTitle title="تكلفة تشغيل ذكية… بدون مفاجآت" />
-      <div className="max-w-4xl mx-auto bg-white rounded-[4rem] p-12 md:p-20 shadow-3xl border border-blue-50 relative">
+      <div className="max-w-4xl mx-auto bg-white rounded-[4rem] p-12 md:p-20 shadow-2xl border border-blue-50 relative">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-8 py-3 rounded-2xl font-black text-xl shadow-lg">
           الحل الاقتصادي الأول للعيادات
         </div>
@@ -420,7 +412,7 @@ const Pricing = () => (
             <p className="text-emerald-600 font-bold text-xl leading-snug">ميزانية تشغيل شهرية كاملة تغنيك عن موظف براتب 40,000 دج</p>
           </div>
         </div>
-        <Button variant="primary" className="w-full py-6 text-2xl shadow-blue-200">سجل اهتمامك بالورشة الآن</Button>
+        <Button variant="primary" className="w-full py-6 text-2xl">سجل اهتمامك بالورشة الآن</Button>
       </div>
     </div>
   </section>
@@ -442,42 +434,6 @@ const FAQ = () => (
       </div>
     </div>
   </section>
-);
-
-const FinalCTA = () => (
-  <section className="py-32 bg-blue-600 relative overflow-hidden text-white">
-    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=1600')] bg-cover bg-center opacity-10"></div>
-    <div className="container mx-auto px-4 text-center relative z-10">
-      <h2 className="text-4xl md:text-7xl font-black mb-10 leading-tight tracking-tight">لا تدع المريض ينتظر... <br/> <span className="text-emerald-300">درّب عيادتك على الذكاء اليوم</span></h2>
-      <p className="text-2xl md:text-3xl mb-14 opacity-90 max-w-3xl mx-auto leading-relaxed">
-        احصل على استشارة مجانية لمدة 20 دقيقة لنشرح لك كيف سنغير تجربة مرضك ونزيد حجوزات عيادتك.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-6 justify-center">
-        <Button variant="secondary" className="px-16 py-6 text-2xl shadow-2xl">احجز استشارتك المجانية</Button>
-        <Button variant="outline" className="px-16 py-6 text-2xl border-white text-white bg-transparent hover:bg-white hover:text-blue-600">تفاصيل الورشة القادمة</Button>
-      </div>
-    </div>
-  </section>
-);
-
-const Footer = () => (
-  <footer className="py-16 bg-slate-900 text-slate-400 border-t border-white/5">
-    <div className="container mx-auto px-4 text-center">
-      <div className="flex items-center justify-center gap-3 mb-8 text-white">
-        <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black text-xl shadow-lg">S</div>
-        <span className="text-2xl font-black">SmartClinic <span className="text-blue-600">AI</span></span>
-      </div>
-      <p className="text-xl mb-10 max-w-xl mx-auto">الرائد الأول في تحويل العيادات الجزائرية إلى عيادات ذكية تعتمد على البيانات والذكاء الاصطناعي.</p>
-      <div className="flex justify-center gap-10 mb-12">
-        <ShieldCheck className="w-8 h-8 hover:text-blue-400 cursor-pointer" />
-        <Zap className="w-8 h-8 hover:text-blue-400 cursor-pointer" />
-        <Clock className="w-8 h-8 hover:text-blue-400 cursor-pointer" />
-      </div>
-      <div className="text-sm font-medium tracking-widest opacity-50">
-        جميع الحقوق محفوظة © {new Date().getFullYear()} SMARTCLINIC AI ALGERIA
-      </div>
-    </div>
-  </footer>
 );
 
 const App: React.FC = () => {
@@ -503,12 +459,24 @@ const App: React.FC = () => {
       <ProofOfValue />
       <Pricing />
       <FAQ />
-      <FinalCTA />
-      <Footer />
+      
+      <section className="py-32 bg-blue-600 relative overflow-hidden text-white text-center">
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-4xl md:text-7xl font-black mb-10 leading-tight">لا تدع المريض ينتظر... <br/> <span className="text-emerald-300">درّب عيادتك على الذكاء اليوم</span></h2>
+          <Button variant="secondary" className="mx-auto px-16 py-6 text-2xl">احجز استشارتك المجانية</Button>
+        </div>
+      </section>
+
+      <footer className="py-16 bg-slate-900 text-slate-400 text-center">
+        <div className="container mx-auto px-4">
+          <span className="text-2xl font-black text-white">SmartClinic <span className="text-blue-600">AI</span></span>
+          <p className="mt-4">جميع الحقوق محفوظة © {new Date().getFullYear()} SMARTCLINIC AI ALGERIA</p>
+        </div>
+      </footer>
 
       {/* Sticky Mobile CTA */}
       <div className={`fixed bottom-0 left-0 right-0 p-4 bg-white/95 backdrop-blur-lg border-t border-slate-200 z-50 md:hidden transition-all duration-500 transform ${showStickyCTA ? 'translate-y-0 shadow-lg' : 'translate-y-full'}`}>
-        <Button variant="primary" className="w-full text-xl py-5">احجز مقعدك في الورشة الآن</Button>
+        <Button variant="primary" className="w-full text-xl py-5">احجز مقعدك الآن</Button>
       </div>
     </div>
   );
